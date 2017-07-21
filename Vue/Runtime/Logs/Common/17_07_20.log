@@ -1,0 +1,48 @@
+[ 2017-07-20T21:08:35+08:00 ] ::1 /VueReact/Vue/index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+ERR: 无法加载模块:Vue
+
+[ 2017-07-20T21:08:53+08:00 ] ::1 /VueReact/index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+ERR: 无法加载模块:Index
+
+[ 2017-07-20T21:10:54+08:00 ] ::1 /VueReact/index.php/Vue/index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+ERR: 无法加载模块:Vue
+
+[ 2017-07-20T21:11:12+08:00 ] ::1 /VueReact/index.php/index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+ERR: 无法加载模块:Index
+
+[ 2017-07-20T21:13:38+08:00 ] ::1 /VueReact/Vue/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+ERR: 无法加载模块:Vue
+
+[ 2017-07-20T21:13:52+08:00 ] ::1 /VueReact/Vue/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+ERR: 无法加载模块:Vue
+
+[ 2017-07-20T21:14:04+08:00 ] ::1 /VueReact/index.phpVue/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+ERR: 无法加载模块:Index.phpVue
+
+[ 2017-07-20T21:14:12+08:00 ] ::1 /VueReact/index.php/Vue/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+ERR: 无法加载模块:Vue
+

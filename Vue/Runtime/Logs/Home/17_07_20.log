@@ -1,0 +1,144 @@
+[ 2017-07-20T20:30:50+08:00 ] ::1 /VueReact/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008448s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2017-07-20T21:09:46+08:00 ] ::1 /VueReact/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001913s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000682s ]
+
+[ 2017-07-20T21:11:42+08:00 ] ::1 /VueReact/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2017-07-20T21:14:24+08:00 ] ::1 /VueReact/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2017-07-20T21:15:18+08:00 ] ::1 /VueReact/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-07-20T21:15:46+08:00 ] ::1 /VueReact/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given D:\www\VueReact\Vue\Home\Controller\IndexController.class.php 第 21 行.
+NOTIC: [2] date() expects at least 1 parameter, 0 given D:\www\VueReact\Vue\Home\Controller\IndexController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `think_users` [ RunTime:0.0030s ]
+SQL: INSERT INTO `think_users` (`name`,`gender`,`address`,`phone`) VALUES ('121','2','2','2') [ RunTime:0.0055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000854s ]
+
+[ 2017-07-20T21:16:38+08:00 ] ::1 /VueReact/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given D:\www\VueReact\Vue\Home\Controller\IndexController.class.php 第 21 行.
+NOTIC: [2] date() expects at least 1 parameter, 0 given D:\www\VueReact\Vue\Home\Controller\IndexController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `think_users` [ RunTime:0.0011s ]
+SQL: INSERT INTO `think_users` (`name`,`gender`,`address`,`phone`) VALUES ('121','2','2','2') [ RunTime:0.0035s ]
+
+[ 2017-07-20T21:18:49+08:00 ] ::1 /VueReact/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `think_users` [ RunTime:0.0011s ]
+SQL: INSERT INTO `think_users` (`name`,`gender`,`address`,`phone`) VALUES ('121','2','2','2') [ RunTime:0.0023s ]
+
+[ 2017-07-20T21:30:11+08:00 ] ::1 /VueReact/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `think_users` [ RunTime:0.0021s ]
+SQL: INSERT INTO `think_users` (`name`,`gender`,`address`,`phone`,`create_date`,`write_date`) VALUES ('曹操','0','陇','陇','2017/07/20 09:30:11pm','2017/07/20 09:30:11pm') [ RunTime:0.0021s ]
+
+[ 2017-07-20T21:31:29+08:00 ] ::1 /VueReact/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `think_users` [ RunTime:0.0012s ]
+SQL: INSERT INTO `think_users` (`name`,`gender`,`address`,`phone`,`create_date`,`write_date`) VALUES ('孙权','0','江东','666','2017/07/20 09:31:29pm','2017/07/20 09:31:29pm') [ RunTime:0.0019s ]
+
+[ 2017-07-20T21:32:04+08:00 ] ::1 /VueReact/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+SQL: SHOW COLUMNS FROM `think_users` [ RunTime:0.0011s ]
+SQL: INSERT INTO `think_users` (`name`,`gender`,`address`,`phone`,`create_date`,`write_date`) VALUES ('刘备','0','汉中','2223','2017/07/20 09:32:04pm','2017/07/20 09:32:04pm') [ RunTime:0.0023s ]
+
+[ 2017-07-20T21:43:31+08:00 ] ::1 /VueReact/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `think_users` [ RunTime:0.0017s ]
+SQL: INSERT INTO `think_users` (`name`,`gender`,`address`,`phone`,`create_date`,`write_date`) VALUES ('','0','','','2017/07/20 09:43:31pm','2017/07/20 09:43:31pm') [ RunTime:0.0038s ]
+
