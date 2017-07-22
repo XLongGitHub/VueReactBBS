@@ -12,6 +12,8 @@
     <link href="../../../Public/css/header.css" rel="stylesheet">
     <link href="../../../Public/css/footer.css" rel="stylesheet">
     <link href="../../../Public/css/left.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
 
     </style>
@@ -95,23 +97,22 @@
     
 
     <div id="user-register">
-         <div class="welcome">
+        <div class="welcome">
             欢迎注册GEEK论坛，在这里你可以向大家展示你的才华，找到更多志同道合的人！
         </div>
         <br/>
         <form>
-
             <br/>
             <br/>
             <div>
                 <label>手机号码:</label>
-                <input type="number" name="phone" placeholder="请输入你的手机号码" />
-                <button>获取验证码</button>
-                <!-- <div>还有秒</div> -->
+                <input type="text" name="phone" placeholder="请输入你的手机号码" />
+                <button id="phoneCheck">获取验证码</button>
+                <button style="display: none" id="time"></button>
             </div>
             <div>
                 <label>验证码:</label>
-                <input type="password" name="password" placeholder="验证码" />
+                <input type="number" name="checkword" placeholder="验证码" />
             </div>
             <div>
                 <label>密码:</label>
@@ -123,14 +124,13 @@
             </div>
             <div>
                 <div>
-                <button type="submit" class="submit"> 提交</button>
-                <button class="back"> 返回</button>
+                    <button type="submit" class="submit">提交</button>
+                    <button class="back">返回</button>
                 </div>
             </div>
-
-
         </form>
     </div>
+    <script src="../../../Public/js/getSms.js"> </script>
 
     <br/>
     
