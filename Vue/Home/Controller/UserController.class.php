@@ -12,6 +12,10 @@ class UserController extends Controller {
         $this->display();
     }
 
+    public function register() {
+        $this->display('register');
+    }
+
     public function addUser() {
 
     }
