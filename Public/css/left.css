@@ -1,0 +1,13 @@
+#left {
+    width: 24.8%;
+    height: 400px;
+
+    background: red;
+    float: left;  
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin-right: 0.2%;
+    /* margin-left: 20px;  */
+    
+}
