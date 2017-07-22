@@ -13,7 +13,14 @@ class UserController extends Controller {
     }
 
     public function register() {
-        $this->display('register');
+        $password = I('get.password', '');
+        if (!empty($password)) { 
+                echo $phone;
+        } else {
+
+                $this->display('register');
+        }
+        // $this->display('register');  //此处每次请求后，刷新页面
     }
 
     public function addUser() {

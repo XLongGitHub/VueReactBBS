@@ -187,7 +187,7 @@ textarea {
 #user-register {
     width: 100%;
     height: 700px;
-     background: #eee; 
+    background: #eee;
 }
 
 #user-register form {
@@ -207,21 +207,19 @@ textarea {
     margin-top: 5px;
 }
 
-
 #user-register form div label {
     float: left;
     width: 100px;
     height: 40px;
-    background:#444;
+    background: #444;
     position: relative;
     left: 5px;
-     top: 5%; 
+    top: 5%;
     color: gainsboro;
     font-size: 22px;
     text-align: center;
     border: 2px solid skyblue;
     border-radius: 2px;
-    
 }
 
 #user-register form input {
@@ -239,12 +237,12 @@ textarea {
 }
 
 #user-register form div button {
-    width: 120px; 
+    width: 110px;
     height: 40px;
     text-align: center;
     color: #fff;
     position: relative;
-    left: 30px;
+    left: 20px;
     top: 5px;
     font-size: 20px;
     border: 2px solid slategray;
@@ -254,11 +252,11 @@ textarea {
     background: #444;
 }
 
-#user-register form div:last-child div{
+#user-register form div:last-child div {
     width: 400px;
     margin: 0 auto;
 }
 
-#user-register form div:last-child button{
+#user-register form div:last-child button {
     margin-left: 40px;
 }
