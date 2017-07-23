@@ -8,28 +8,33 @@ class UserController extends Controller {
         $User = D('users');
         $users = $User->select();
         $this->assign('users', $users);
-        // var_dump($users);
         $this->display();
     }
-
+    /**
+    *用户使用电话号码进行注册
+    */
     public function register() {
-        if (IS_GET) {
+        if ($_SERVER['HTTP_REQUEST_TYPE'] == 'ajax') {
+            exit();
+        } else if (IS_GET) {
             $password =trim(I('get.password', ''));
             if (!empty($password)) { 
-                    echo $phone;
                     $this->success();
-                    echo 1;
+                    exit();
             } else {
-                    echo 2;
                     $this->display('register');
             }
         } else if (IS_POST) {
-            echo 3;
             $phone = trim(I('post.phone', '', 'strval'));
             $password = trim(I('post.password', '', 'strval'));
+            if (empty($phone) || empty($password)) {
+                $this->error();
+                exit;
+            }
             $data = array(
                 'phone' => $phone,
-                'password' => $password
+                'password' => md5($password),
+                'create_time' => date('Y/m/d H:i:sa')
             );
             $Users = D('users');
             $id = $Users->data($data)->add();
@@ -39,8 +44,9 @@ class UserController extends Controller {
                 $this->error();
             }
 
+        } else {
+            $this->display('register');
         }
-        // echo 'afdf';
         // $this->display('register');  //此处每次请求后，刷新页面
     }
 
@@ -57,6 +63,10 @@ class UserController extends Controller {
     }
 
     public function gerUser() {
+
+    }
+
+    public function getSms() {
 
     }
 }
