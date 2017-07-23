@@ -1,4 +1,3 @@
-
 #header {
     width: 100%;
     height: 80px;
@@ -33,8 +32,6 @@
     position: relative;
     /* background: url('../../Public/images/logo.png') no-repeat; */
 }
-
-
 
 #logo-wrap button {
     width: 80px;
@@ -108,7 +105,6 @@
     z-index: 1;
 }
 
-
 #menu {
     float: right;
     margin-right: 50px;
@@ -133,5 +129,3 @@
     display: block;
     margin-top: 30px;
 }
-
-

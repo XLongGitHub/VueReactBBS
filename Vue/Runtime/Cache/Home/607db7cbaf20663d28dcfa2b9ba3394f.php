@@ -97,62 +97,68 @@
         <div class="welcome">
             欢迎注册GEEK论坛，在这里你可以向大家展示你的才华，找到更多志同道合的人！
         </div>
-        <form id="user-add-form">
+        <!-- 默认get，导致后台数据获取失败 -->
+        <form id="user-add-form" method="POST">
             <div>
                 <label class="input-tip">姓名:</label>
-                <input name="name" type="text" placeholder="请输入你的姓名" />
+                 <input name="name" type="text" <?php if($name == ''): ?>placeholder="请输入你的姓名" <?php else: ?> value= "<?php echo ($name); ?>"<?php endif; ?>
+                 /> 
+                 
             </div>
             <br/>
             <div>
                 <label class="input-tip">性别:</label>
                 <div id="gender">
                     <div>
-                        <input type="radio" name="gender" id="male" value="male" />
+                        <input type="radio" name="gender" id="male" value="male" <?php if($gender == '0'): ?>checked<?php endif; ?> />
                         <label for="male">男</label>
                     </div>
                     <div>
-                        <input type="radio" name="gender" id="female" value="female" />
+                        <input type="radio" name="gender" id="female" value="female" <?php if($gender == '1'): ?>checked<?php endif; ?>  />
                         <label for="female">女</label>
                     </div>
                     <div>
-                        <input type="radio" name="gender" id="secret" value="secret" />
+                        <input type="radio" name="gender" id="secret" value="secret"  <?php if($gender == '2'): ?>checked<?php endif; ?>  />
                         <label for="secret">保密</label>
                     </div>
                 </div>
             </div>
             <br/>
-            <div>
+            <!-- <div>
                 <label class="input-tip">年龄:</label>
                 <input type="text" name="age" placeholder="" />
             </div>
-            <br/>
+            <br/> -->
             <div>
                 <label class="input-tip">生日:</label>
-                <input type="date" name="birthday" />
+                <input type="date" name="birthday" <?php if($birthday != ''): ?>value = "<?php echo ($birthday); ?>"<?php endif; ?> />
             </div>
             <br/>
             <div>
                 <label class="input-tip">地址:</label>
-                <input type="text" name="brithday" />
+                <input type="text" name="address"   <?php if($address != ''): ?>value="<?php echo ($address); ?>"<?php endif; ?>  />
             </div>
             <br/>
-            <div>
+            <!-- <div>
                 <label class="input-tip">电话:</label>
                 <input type="number" name="phone" />
             </div>
-            <br/>
+            <br/> -->
             <div>
                 <label class="input-tip">邮箱:</label>
-                <input type="email" name="email" />
+                <input type="email" name="email" <?php if($email != ''): ?>value="<?php echo ($email); ?>"<?php endif; ?> />
             </div>
             <br/>
             <div>
                 <label class="input-tip">简介:</label>
-                <textarea name="introduction">用几句话，简单描述自己！</textarea>
+                <textarea name="description">
+                    <?php if($description != ''): echo ($description); else: ?>
+                    用几句话，简单描述自己！<?php endif; ?>
+                </textarea>
             </div>
             <br/>
             <div>
-                <button type="submit" class="submit">注册</button>
+                <button type="submit" class="submit">更新</button>
                 <button class="back">返回</button>
             </div> 
         </form>
