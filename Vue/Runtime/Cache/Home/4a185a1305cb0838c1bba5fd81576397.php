@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>reigster</title>
-
+        <title>标题</title>
+    
     <link href="../../../Public/css/base.css" rel="stylesheet">
     <link href="../../../Public/css/user.css" rel="stylesheet">
     <link href="../../../Public/css/header.css" rel="stylesheet">
@@ -92,72 +92,43 @@
         </div>
     
     
-    <link href="../../../Public/css/user.css" rel="stylesheet">
-    <div id="user-add">
+
+    <div id="user-register">
         <div class="welcome">
             欢迎注册GEEK论坛，在这里你可以向大家展示你的才华，找到更多志同道合的人！
         </div>
-        <form id="user-add-form">
-            <div>
-                <label class="input-tip">姓名:</label>
-                <input name="name" type="text" placeholder="请输入你的姓名" />
-            </div>
+        <br/>
+        <form action="" method="POST">
+            <br/>
             <br/>
             <div>
-                <label class="input-tip">性别:</label>
-                <div id="gender">
-                    <div>
-                        <input type="radio" name="gender" id="male" value="male" />
-                        <label for="male">男</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="gender" id="female" value="female" />
-                        <label for="female">女</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="gender" id="secret" value="secret" />
-                        <label for="secret">保密</label>
-                    </div>
+                <label>手机号码:</label>
+                <input type="text" name="phone" placeholder="请输入你的手机号码" />
+                <button id="phoneCheck">获取验证码</button>
+                <!-- <button style="display: none" id="time"></button> -->
+            </div>
+            <div>
+                <label>验证码:</label>
+                <input type="number" name="checkword" placeholder="验证码" />
+            </div>
+            <div>
+                <label>密码:</label>
+                <input type="password" name="password" placeholder="请输入密码" />
+                <span id="passwordTip" style="color: red"></span>
+            </div>
+            <div>
+                <label>确认密码:</label>
+                <input type="password" name="password2" placeholder="请再次输入密码" />
+            </div>
+            <div>
+                <div>
+                    <button type="submit" class="submit">提交</button>
+                    <button class="back">返回</button>
                 </div>
             </div>
-            <br/>
-            <div>
-                <label class="input-tip">年龄:</label>
-                <input type="text" name="age" placeholder="" />
-            </div>
-            <br/>
-            <div>
-                <label class="input-tip">生日:</label>
-                <input type="date" name="birthday" />
-            </div>
-            <br/>
-            <div>
-                <label class="input-tip">地址:</label>
-                <input type="text" name="brithday" />
-            </div>
-            <br/>
-            <div>
-                <label class="input-tip">电话:</label>
-                <input type="number" name="phone" />
-            </div>
-            <br/>
-            <div>
-                <label class="input-tip">邮箱:</label>
-                <input type="email" name="email" />
-            </div>
-            <br/>
-            <div>
-                <label class="input-tip">简介:</label>
-                <textarea name="introduction">用几句话，简单描述自己！</textarea>
-            </div>
-            <br/>
-            <div>
-                <button type="submit" class="submit">注册</button>
-                <button class="back">返回</button>
-            </div> 
         </form>
-        <?php  ?>
     </div>
+    <script src="../../../Public/js/getSms.js"> </script>
 
     <br/>
     
