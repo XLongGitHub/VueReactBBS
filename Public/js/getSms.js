@@ -7,11 +7,9 @@ let password = document.querySelector('input[name=password]');
 let password2 = document.querySelector('input[name=password2]');
 let passwordTip = document.querySelector('#passwordTip');
 //未阻止默认事件时，时钟触发失败
-$('form').submit((evt) => {
-    // evt.preventDefault();
-});
 
-phoneCheck.addEventListener('click', () => {
+phoneCheck.addEventListener('click', (evt) => {
+    evt.preventDefault();
     phoneCheckFunc();
 });
 
@@ -25,6 +23,9 @@ function phoneCheckFunc() {
         $.ajax({
             url: window.location,
             method: 'get',
+            beforeSend : function (XMLHttpRequest) {
+                XMLHttpRequest.setRequestHeader('request_type','ajax');
+            },
             data: {
                 phone: phone.value
             }
@@ -57,13 +58,10 @@ if (password.addEventListener) {
         checkPassword();
     });
     password2.addEventListener('keyup', () => {
-        // alert('ere');
         checkPassword();
     });
 } else {
-    // alert('fdafa');
-    // $('input[name=password]').click(checkPassword());
-    // $('input[name=password]2').click(checkPassword());
+
 }
 
 function checkPassword() {
@@ -95,14 +93,22 @@ function checkPassword() {
             passwordTip.innerText = '两次输入的密码不同'; 
         }
     }
-
-    $('form').submit((evt) => {
-        // evt.preventDefault();
-    });
-
-
 }
 //去除字符串首末空格
 function trim(str) {
     return str.replace(/^\s*/, '').replace(/\s*$/, '');
+}
+
+function formValidate() {
+    if (trim(phone.value).length > 8 && 
+        trim(phone.value).length <= 11 &&
+        trim(checkword.value).length === 4 &&
+        trim(password.value).length >= 6 &&
+        trim(password.value) === trim(password2.value)
+    ) {
+        return true;
+    } else {
+        alert('form error');
+        return false;
+    }
 }
