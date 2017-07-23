@@ -191,13 +191,12 @@ textarea {
 }
 
 #user-register form {
-    width: 40%;
-    /* background: black; */
+    width: 48%;
     left: 15%;
     position: relative;
     float: left;
     border: 2px solid skyblue;
-    background: #ddd;
+     background: #ddd; 
 }
 
 #user-register form div {

@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>reigster</title>
+
     <link href="../../../Public/css/base.css" rel="stylesheet">
     <link href="../../../Public/css/user.css" rel="stylesheet">
     <link href="../../../Public/css/header.css" rel="stylesheet">
     <link href="../../../Public/css/footer.css" rel="stylesheet">
     <link href="../../../Public/css/left.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
 
     </style>
@@ -25,9 +29,7 @@
                         <img src="../../../Public/images/logo2.png" width="140px" height="75px" />
                         </a>
                     </div>
-                    <!-- <div>
-                        论坛流
-                    </div> -->
+                 
                     <button>
                         首页</button>
                     <div class="topic">
@@ -41,7 +43,6 @@
 
                 </div>
                 <div id="menu">
-                    <!-- <div id="avator">头像</div> -->
                     <img src="http://img.hb.aicdn.com/df06b1d34e232d33dd527ee64f98eed9dcfcbf0d3161f-kZEebg_sq140sf" 
                         alt="头像" 
                         style="width:45px;height:45px;float: left;top: 20px; display: block; position: relative; right: 5px;"/>
@@ -91,30 +92,30 @@
         </div>
     
     
-<link href="../../../Public/css/user.css" rel="stylesheet">  
-     <div id="user-add">
+    <link href="../../../Public/css/user.css" rel="stylesheet">
+    <div id="user-add">
         <div class="welcome">
             欢迎注册GEEK论坛，在这里你可以向大家展示你的才华，找到更多志同道合的人！
         </div>
         <form id="user-add-form">
             <div>
                 <label class="input-tip">姓名:</label>
-                <input name="name" type="text" placeholder="请输入你的姓名"/>
+                <input name="name" type="text" placeholder="请输入你的姓名" />
             </div>
             <br/>
             <div>
                 <label class="input-tip">性别:</label>
                 <div id="gender">
                     <div>
-                        <input type="radio" name="gender" id="male" value="male"/>
+                        <input type="radio" name="gender" id="male" value="male" />
                         <label for="male">男</label>
                     </div>
                     <div>
-                        <input type="radio"  name="gender" id="female" value="female"/>
+                        <input type="radio" name="gender" id="female" value="female" />
                         <label for="female">女</label>
                     </div>
                     <div>
-                        <input type="radio" name="gender" id="secret" value="secret"/>
+                        <input type="radio" name="gender" id="secret" value="secret" />
                         <label for="secret">保密</label>
                     </div>
                 </div>
@@ -122,27 +123,27 @@
             <br/>
             <div>
                 <label class="input-tip">年龄:</label>
-                <input type="text" name="age" placeholder=""/>
+                <input type="text" name="age" placeholder="" />
             </div>
             <br/>
             <div>
                 <label class="input-tip">生日:</label>
-                <input type="date" name="birthday"/>
+                <input type="date" name="birthday" />
             </div>
             <br/>
             <div>
                 <label class="input-tip">地址:</label>
-                <input type="text" name="brithday"/>
+                <input type="text" name="brithday" />
             </div>
             <br/>
             <div>
                 <label class="input-tip">电话:</label>
-                <input type="number" name="phone"/>
+                <input type="number" name="phone" />
             </div>
             <br/>
             <div>
                 <label class="input-tip">邮箱:</label>
-                <input type="email" name="email"/>
+                <input type="email" name="email" />
             </div>
             <br/>
             <div>
@@ -151,17 +152,12 @@
             </div>
             <br/>
             <div>
-                <!-- <input type="submit" class="submit" value="注册"/> -->
-                <!-- <input type="button" class="back" value="返回"/> -->
                 <button type="submit" class="submit">注册</button>
                 <button class="back">返回</button>
-            </div>
-            
-        
-                
-            </form>
+            </div> 
+        </form>
         <?php  ?>
-        </div>
+    </div>
 
     <br/>
     
