@@ -23,6 +23,7 @@ module.exports = {
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "no-var":1,
+        "no-alert": 'error',
         // 'no-trailing-spaces': 'error', // 禁用行尾空格 
         'arrow-spacing': 'error', // 要求箭头函数的箭头之前和之后有空格 
         'semi': ['error', 'always'], //不得省略语句结束的分号 

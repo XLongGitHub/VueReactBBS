@@ -29,9 +29,7 @@
                         <img src="../../../Public/images/logo2.png" width="140px" height="75px" />
                         </a>
                     </div>
-                    <!-- <div>
-                        论坛流
-                    </div> -->
+                 
                     <button>
                         首页</button>
                     <div class="topic">
@@ -45,7 +43,6 @@
 
                 </div>
                 <div id="menu">
-                    <!-- <div id="avator">头像</div> -->
                     <img src="http://img.hb.aicdn.com/df06b1d34e232d33dd527ee64f98eed9dcfcbf0d3161f-kZEebg_sq140sf" 
                         alt="头像" 
                         style="width:45px;height:45px;float: left;top: 20px; display: block; position: relative; right: 5px;"/>
@@ -101,14 +98,14 @@
             欢迎注册GEEK论坛，在这里你可以向大家展示你的才华，找到更多志同道合的人！
         </div>
         <br/>
-        <form>
+        <form action="" method="POST">
             <br/>
             <br/>
             <div>
                 <label>手机号码:</label>
                 <input type="text" name="phone" placeholder="请输入你的手机号码" />
                 <button id="phoneCheck">获取验证码</button>
-                <button style="display: none" id="time"></button>
+                <!-- <button style="display: none" id="time"></button> -->
             </div>
             <div>
                 <label>验证码:</label>
@@ -117,6 +114,7 @@
             <div>
                 <label>密码:</label>
                 <input type="password" name="password" placeholder="请输入密码" />
+                <span id="passwordTip" style="color: red"></span>
             </div>
             <div>
                 <label>确认密码:</label>

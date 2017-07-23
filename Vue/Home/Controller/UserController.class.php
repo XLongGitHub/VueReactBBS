@@ -13,13 +13,34 @@ class UserController extends Controller {
     }
 
     public function register() {
-        $password = I('get.password', '');
-        if (!empty($password)) { 
-                echo $phone;
-        } else {
+        if (IS_GET) {
+            $password =trim(I('get.password', ''));
+            if (!empty($password)) { 
+                    echo $phone;
+                    $this->success();
+                    echo 1;
+            } else {
+                    echo 2;
+                    $this->display('register');
+            }
+        } else if (IS_POST) {
+            echo 3;
+            $phone = trim(I('post.phone', '', 'strval'));
+            $password = trim(I('post.password', '', 'strval'));
+            $data = array(
+                'phone' => $phone,
+                'password' => $password
+            );
+            $Users = D('users');
+            $id = $Users->data($data)->add();
+            if ($id > 0) {
+                $this->success(); 
+            } else {
+                $this->error();
+            }
 
-                $this->display('register');
         }
+        // echo 'afdf';
         // $this->display('register');  //此处每次请求后，刷新页面
     }
 
