@@ -8,27 +8,7 @@ class IndexController extends Controller {
     }
 
     public function register() {
-        $name = I('post.name', '', 'strval');
-        $gender = I('post.gender', '', 'strval');
-        $password = I('post.password', '', 'strval');
-        $address = I('post.address', '', 'strval');
-        $phone = I('post.phone', '', 'strval');
-
-        $data = array(
-            'name' => $name,
-            'gender' => $gender,
-            'password' => md5($password),
-            'address' => $address,
-            'phone' => $phone,
-            'create_date' => date('Y/m/d h:i:sa'),
-            'write_date' => date('Y/m/d h:i:sa')
-        );
-        $User = D('users');
-        $User->data($data)->add();
-
-        // return json_encode($data);
-        echo json_encode($data);
-        exit;
+       
     }
 
     public function login() {
