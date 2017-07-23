@@ -1,0 +1,20 @@
+{
+  "name": "vuereact",
+  "version": "1.0.0",
+  "description": "使用Thinkphp框架进行开发，入门Vue和Recat的练习",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-plugin-react": "^7.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xulong",
+  "license": "ISC"
+}
