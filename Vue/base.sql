@@ -16,5 +16,17 @@ create table `think_users`(
     `description` varchar(255),
     `create_date` varchar(30),
     `write_date` varchar(30)
-
 );
+
+drop table if exists `think_quesions`;
+create table `think_quesions`(
+    `id` int(11) primary key auto_increment,
+    `pid` int(11),
+    `userId` int(11) commit "提出问题或回答的id",
+    `title` varchar(255),
+    `content` text commit '问题描述',
+    `top` tinyInt(2) commit "区分是问题还是用户的回答 1 top ",
+    `create_time` varchar(30),
+    `write_date` varchar(30)
+);
+

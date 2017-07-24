@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>完善个人信息</title>
+    <title>发布问题 </title>
 
     <link href="../../../Public/css/base.css" rel="stylesheet">
     <link href="../../../Public/css/user.css" rel="stylesheet">
@@ -92,77 +92,113 @@
         </div>
     
     
-    <link href="../../../Public/css/user.css" rel="stylesheet">
-    <div id="user-add">
-        <div class="welcome">
-            欢迎注册GEEK论坛，在这里你可以向大家展示你的才华，找到更多志同道合的人！
-        </div>
-        <!-- 默认get，导致后台数据获取失败 -->
-        <form id="user-add-form" method="POST">
+    <style>
+        .title {
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            background: #bbb;
+            border-bottom: 3px solid #ccc;
+        }
+
+        #addQuestion {
+            width: 50%;
+            height: 600px;
+            border: 2px solid skyblue;
+            left: 10%;
+            position: relative;
+            float: left;
+        }
+
+        #addQuestion div label:first-child {
+            width: 80px;
+            height: 40px;
+            float: left;
+            position: relative;
+            top: 40px;
+            left: 5%;
+            background: #555;
+            color: #DCDCDC;
+            font-size: 26px;
+            text-align: center;
+            border: 2px #fff solid;
+            border-radius: 5px;
+        }
+
+        #addQuestion div:first-child input {
+            width: 70%;
+            height: 40px;
+            /* background: black; */
+            background: #fff;
+            position: relative;
+            top: 40px;
+            left: 7%;
+            border: 1px solid skyblue;
+            margin: 1px;
+        }
+
+        #addQuestion div:nth-child(2) label {
+            top: 80px;
+        }
+
+        #addQuestion textarea {
+            float: left;
+            width: 70%;
+            height: 300px;
+            position: relative;
+            top: 20px;
+            left: 5%;
+            background: #fff;
+            border: 1px solid skyblue;
+        }
+
+
+        #addQuestion div:last-child {
+            /* width: 100%; */
+            /* width: 200px; */
+            /* height: 200px; */
+            
+            /* margin: 0 auto; */
+            position: relative;
+            float: left;
+            top: 400px;
+             background:  black; 
+
+        }
+
+         #addQuestion button {
+            /* float: left; */
+            width: 100px;
+            height: 45px;
+            position: relative;
+             top: 40px; 
+             margin-left: 200px;
+             font-size: 20px;
+        } 
+    </style>
+
+    <div class="title">欢迎提出新的问题</div>
+    <br/>
+    <div id="addQuestion">
+        <form method="POST">
             <div>
-                <label class="input-tip">姓名:</label>
-                 <input name="name" type="text" <?php if($name == ''): ?>placeholder="请输入你的姓名" <?php else: ?> value= "<?php echo ($name); ?>"<?php endif; ?>
-                 /> 
-                 
+                <label>标题:</label>
+                <input type="text" name="title" />
             </div>
             <br/>
             <div>
-                <label class="input-tip">性别:</label>
-                <div id="gender">
-                    <div>
-                        <input type="radio" name="gender" id="male" value="male" <?php if($gender == '0'): ?>checked<?php endif; ?> />
-                        <label for="male">男</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="gender" id="female" value="female" <?php if($gender == '1'): ?>checked<?php endif; ?>  />
-                        <label for="female">女</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="gender" id="secret" value="secret"  <?php if($gender == '2'): ?>checked<?php endif; ?>  />
-                        <label for="secret">保密</label>
-                    </div>
-                </div>
-            </div>
-            <br/>
-            <!-- <div>
-                <label class="input-tip">年龄:</label>
-                <input type="text" name="age" placeholder="" />
-            </div>
-            <br/> -->
-            <div>
-                <label class="input-tip">生日:</label>
-                <input type="date" name="birthday" <?php if($birthday != ''): ?>value = "<?php echo ($birthday); ?>"<?php endif; ?> />
+                <label>内容:</label>
+                <br/>
+                <textarea name="content"></textarea>
             </div>
             <br/>
             <div>
-                <label class="input-tip">地址:</label>
-                <input type="text" name="address"   <?php if($address != ''): ?>value="<?php echo ($address); ?>"<?php endif; ?>  />
+                <button type="submit" class="submit">发表</button>
+                <button type="back" class="back">返回</button>
             </div>
             <br/>
-            <!-- <div>
-                <label class="input-tip">电话:</label>
-                <input type="number" name="phone" />
-            </div>
-            <br/> -->
-            <div>
-                <label class="input-tip">邮箱:</label>
-                <input type="email" name="email" <?php if($email != ''): ?>value="<?php echo ($email); ?>"<?php endif; ?> />
-            </div>
-            <br/>
-            <div>
-                <label class="input-tip">简介:</label>
-                <textarea name="description">
-                    <?php if($description != ''): echo ($description); else: ?>
-                    用几句话，简单描述自己！<?php endif; ?>
-                </textarea>
-            </div>
-            <br/>
-            <div>
-                <button type="submit" class="submit">更新</button>
-                <button class="back">返回</button>
-            </div> 
         </form>
-        <?php  ?>
     </div>
 
     <br/>

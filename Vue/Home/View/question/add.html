@@ -1,0 +1,115 @@
+<extend name="base" />
+
+<block name="title">
+    <title>发布问题 </title>
+</block>
+<block name="main">
+    <style>
+        .title {
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            background: #bbb;
+            border-bottom: 3px solid #ccc;
+        }
+
+        #addQuestion {
+            width: 50%;
+            height: 600px;
+            border: 2px solid skyblue;
+            left: 10%;
+            position: relative;
+            float: left;
+        }
+
+        #addQuestion div label:first-child {
+            width: 80px;
+            height: 40px;
+            float: left;
+            position: relative;
+            top: 40px;
+            left: 5%;
+            background: #555;
+            color: #DCDCDC;
+            font-size: 26px;
+            text-align: center;
+            border: 2px #fff solid;
+            border-radius: 5px;
+        }
+
+        #addQuestion div:first-child input {
+            width: 70%;
+            height: 40px;
+            /* background: black; */
+            background: #fff;
+            position: relative;
+            top: 40px;
+            left: 7%;
+            border: 1px solid skyblue;
+            margin: 1px;
+        }
+
+        #addQuestion div:nth-child(2) label {
+            top: 80px;
+        }
+
+        #addQuestion textarea {
+            float: left;
+            width: 70%;
+            height: 300px;
+            position: relative;
+            top: 20px;
+            left: 5%;
+            background: #fff;
+            border: 1px solid skyblue;
+        }
+
+
+        #addQuestion div:last-child {
+            /* width: 100%; */
+            /* width: 200px; */
+            /* height: 200px; */
+            
+            /* margin: 0 auto; */
+            position: relative;
+            float: left;
+            top: 400px;
+             background:  black; 
+
+        }
+
+         #addQuestion button {
+            /* float: left; */
+            width: 100px;
+            height: 45px;
+            position: relative;
+             top: 40px; 
+             margin-left: 200px;
+             font-size: 20px;
+        } 
+    </style>
+
+    <div class="title">欢迎提出新的问题</div>
+    <br/>
+    <div id="addQuestion">
+        <form method="POST">
+            <div>
+                <label>标题:</label>
+                <input type="text" name="title" />
+            </div>
+            <br/>
+            <div>
+                <label>内容:</label>
+                <br/>
+                <textarea name="content"></textarea>
+            </div>
+            <br/>
+            <div>
+                <button type="submit" class="submit">发表</button>
+                <button type="back" class="back">返回</button>
+            </div>
+            <br/>
+        </form>
+    </div>
+</block>
