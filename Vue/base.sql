@@ -26,7 +26,7 @@ create table `think_quesions`(
     `title` varchar(255),
     `content` text commit '问题描述',
     `top` tinyInt(2) commit "区分是问题还是用户的回答 1 top ",
-    `create_time` varchar(30),
+    `create_date` varchar(30),
     `write_date` varchar(30)
 );
 
