@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <block name="title">
-        <title>标题</title>
-    </block>
+    
+    <title>用户登陆</title>
+
     <link href="../../../Public/css/base.css" rel="stylesheet">
     <link href="../../../Public/css/user.css" rel="stylesheet">
     <link href="../../../Public/css/header.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <block name="header">
+    
         <div id="header">
             <div id="header-wrap">
                 <div id="logo-wrap">
@@ -43,21 +43,21 @@
 
                 </div>
                 <div id="menu">
-                    <a href="{:U('User/add')}" style="float: left; display: block;position: relative;" >
+                    <a href="<?php echo U('User/add');?>" style="float: left; display: block;position: relative;" >
                     <img src="http://img.hb.aicdn.com/df06b1d34e232d33dd527ee64f98eed9dcfcbf0d3161f-kZEebg_sq140sf" 
                         alt="头像" 
                         style="width:45px;height:45px;float: left;top: 20px; display: block; position: relative; right: 5px;"/>
                     </a>
                     <!-- <div><a href= "../Index/login" > 登陆</a></div> -->
-                    <div><a href= "{:U('Index/login')}" > 登陆</a></div>
-                    <div><a href="{:U('User/register')}"> 注册</a></div>
-                    <div><a href="{:U('Index/signOut')}">  注销</a></div>
+                    <div><a href= "<?php echo U('Index/login');?>" > 登陆</a></div>
+                    <div><a href="<?php echo U('User/register');?>"> 注册</a></div>
+                    <div><a href="<?php echo U('Index/signOut');?>">  注销</a></div>
                 </div>
             </div>
         </div>
-    </block>
-    <!-- <block name="menu">menu</block> -->
-    <block name="left">
+    
+    <!-- menu -->
+    
         <div id="left">
             <div>
                 <div><a href="#"> 问答</a></div>
@@ -93,10 +93,112 @@
                 </div>
             </div>
         </div>
-    </block>
-    <block name="main">main</block>
+    
+    
+    <style>
+        #login {
+            float: left;
+            width: 50%;
+            position: relative;
+            border: 2px solid skyblue;
+            left: 10%;
+        }
+
+        #login label {
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            font-size: 24px;
+            border: 2px solid skyblue;
+            float: left;
+            left: 5%;
+            position: relative;
+            top: 20px;
+        }
+
+        #login input {
+            width: 60%;
+            height: 40px;
+            /* float: left;    最后一个不浮动，好进行换行 */
+            position: relative;
+            left: 8%;
+            top: 20px;
+            border: 2px solid skyblue;
+        }
+
+        #login input[name=verifyCode] {
+            width: 30%;
+            float: left;
+        }
+
+        #login img {
+            position: relative;
+            left: 12%;
+            top: 10px;
+        }
+
+        #login button {
+            width: 18%;
+            height: 40px;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+            margin: 10px auto;
+            left: 20%;
+            position: relative;
+        }
+    </style>
+    <div class="title">
+        欢迎登陆
+    </div>
     <br/>
-    <block name="footer">
+    <div id="login">
+        <form method="POST" onsubmit="return checkForm();">
+            <div>
+                <label for="phone">手机号码:</label>
+                <input type="text" name="phone" />
+            </div>
+            <br/>
+            <div>
+                <label for="password">密码:</label>
+                <input type="password" name="password" />
+            </div>
+            <br/>
+            <div>
+                <label for="verifyCode">验证码:</label>
+                <input type="text" name="verifyCode" />
+                <img src="<?php echo U('index/verifyCode');?>" />
+            </div>
+            <br/>
+            <div>
+                <button type="submit">提交</button>
+                <button>返回</button>
+            </div>
+            <br/>
+        </form>
+    </div>
+    <script>
+        let phone = document.querySelector('input[name=phone]');
+        let password = document.querySelector('input[name=password');
+        let verifyCode = document.querySelector('input[name=verifyCode]');
+        function checkForm() {
+            if (phone.value == '') {
+                phone.focus();
+                return false;
+            }
+            if (password.value == '') {
+                password.focus();
+                return false;
+            }
+            if (checkForm.value == '') {
+                checkForm.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <br/>
+    
         <br/>
         <div id="footer">
             <div id="footer-content">
@@ -115,7 +217,7 @@
             </div>
             </div>
         </div>
-    </block>
+    
 </body>
 
 </html>

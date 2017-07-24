@@ -1,0 +1,109 @@
+<extend name="base" />
+
+<block name="title">
+    <title>用户登陆</title>
+</block>
+
+<block name="main">
+    <style>
+        #login {
+            float: left;
+            width: 50%;
+            position: relative;
+            border: 2px solid skyblue;
+            left: 10%;
+        }
+
+        #login label {
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            font-size: 24px;
+            border: 2px solid skyblue;
+            float: left;
+            left: 5%;
+            position: relative;
+            top: 20px;
+        }
+
+        #login input {
+            width: 60%;
+            height: 40px;
+            /* float: left;    最后一个不浮动，好进行换行 */
+            position: relative;
+            left: 8%;
+            top: 20px;
+            border: 2px solid skyblue;
+        }
+
+        #login input[name=verifyCode] {
+            width: 30%;
+            float: left;
+        }
+
+        #login img {
+            position: relative;
+            left: 12%;
+            top: 10px;
+        }
+
+        #login button {
+            width: 18%;
+            height: 40px;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+            margin: 10px auto;
+            left: 20%;
+            position: relative;
+        }
+    </style>
+    <div class="title">
+        欢迎登陆
+    </div>
+    <br/>
+    <div id="login">
+        <form method="POST" onsubmit="return checkForm();">
+            <div>
+                <label for="phone">手机号码:</label>
+                <input type="text" name="phone" />
+            </div>
+            <br/>
+            <div>
+                <label for="password">密码:</label>
+                <input type="password" name="password" />
+            </div>
+            <br/>
+            <div>
+                <label for="verifyCode">验证码:</label>
+                <input type="text" name="verifyCode" />
+                <img src="{:U('index/verifyCode')}" />
+            </div>
+            <br/>
+            <div>
+                <button type="submit">提交</button>
+                <button>返回</button>
+            </div>
+            <br/>
+        </form>
+    </div>
+    <script>
+        let phone = document.querySelector('input[name=phone]');
+        let password = document.querySelector('input[name=password');
+        let verifyCode = document.querySelector('input[name=verifyCode]');
+        function checkForm() {
+            if (phone.value == '') {
+                phone.focus();
+                return false;
+            }
+            if (password.value == '') {
+                password.focus();
+                return false;
+            }
+            if (checkForm.value == '') {
+                checkForm.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</block>

@@ -65,6 +65,7 @@ class UserController extends Controller {
     }
     //找不到方法之后，去index中了error
     public function add() {
+        var_dump($_SESSION);
         $Users = D('users');
         $userId = session('user')['userId'];
         if (IS_POST) { 
@@ -92,7 +93,7 @@ class UserController extends Controller {
             $this->success('个人信息修改成功');
             // exit;
         } else {
-            $userId = 1;
+            $userId = $_SESSION['user']['userId'];
             $userData = $Users->where("id = $userId")->find();
             // ->getField('name', 'gender', 'address', 'birthday', 'email', 'description');  //只得到了第一个字段
             // var_dump($userData);
