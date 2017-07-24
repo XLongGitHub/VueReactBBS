@@ -46,10 +46,16 @@
                     <img src="http://img.hb.aicdn.com/df06b1d34e232d33dd527ee64f98eed9dcfcbf0d3161f-kZEebg_sq140sf" 
                         alt="头像" 
                         style="width:45px;height:45px;float: left;top: 20px; display: block; position: relative; right: 5px;"/>
+<<<<<<< HEAD
                     <!-- <div><a href= "../Index/login" > 登陆</a></div> -->
                     <div><a href= "<?php echo U('Index/login');?>" > 登陆</a></div>
                     <div><a href="<?php echo U('User/register');?>"> 注册</a></div>
                     <div><a href="<?php echo U('Index/signOut');?>">  注销</a></div>
+=======
+                    <div><a href="#"> 登陆</a></div>
+                    <div><a href="#"> 注册</a></div>
+                    <div><a href="#">  注销</a></div>
+>>>>>>> 560eacd55197dd63e616f9915c1646f3a3f9c3cf
                 </div>
             </div>
         </div>
