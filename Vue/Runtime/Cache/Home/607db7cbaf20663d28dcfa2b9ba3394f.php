@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-<<<<<<< HEAD
     <title>完善个人信息</title>
-=======
-    <title>reigster</title>
->>>>>>> 560eacd55197dd63e616f9915c1646f3a3f9c3cf
 
     <link href="../../../Public/css/base.css" rel="stylesheet">
     <link href="../../../Public/css/user.css" rel="stylesheet">
@@ -47,7 +43,6 @@
 
                 </div>
                 <div id="menu">
-<<<<<<< HEAD
                     <a href="<?php echo U('User/add');?>" style="float: left; display: block;position: relative;" >
                     <img src="http://img.hb.aicdn.com/df06b1d34e232d33dd527ee64f98eed9dcfcbf0d3161f-kZEebg_sq140sf" 
                         alt="头像" 
@@ -57,23 +52,53 @@
                     <div><a href= "<?php echo U('Index/login');?>" > 登陆</a></div>
                     <div><a href="<?php echo U('User/register');?>"> 注册</a></div>
                     <div><a href="<?php echo U('Index/signOut');?>">  注销</a></div>
-=======
-                    <img src="http://img.hb.aicdn.com/df06b1d34e232d33dd527ee64f98eed9dcfcbf0d3161f-kZEebg_sq140sf" 
-                        alt="头像" 
-                        style="width:45px;height:45px;float: left;top: 20px; display: block; position: relative; right: 5px;"/>
-                    <div><a href="#"> 登陆</a></div>
-                    <div><a href="#"> 注册</a></div>
-                    <div><a href="#">  注销</a></div>
->>>>>>> 560eacd55197dd63e616f9915c1646f3a3f9c3cf
                 </div>
             </div>
         </div>
     
     <!-- menu -->
     
+        <script>
+            // window.onload = function() { 
+            // let quesion = document.querySelector('div[name=question]');
+            // let childern1 = quesion.children;
+            // for (let i = 0; i < childern1.length; i++) {
+
+            //     alert(childern1[i].style.display);
+
+            //     }
+            // }
+
+        window.onload = function() { 
+            // let quesion = document.querySelector('#left div:first-child div:first-child');
+            let menu = document.querySelector('#left div:first-child');
+            
+            for (let i = 0; i < menu.length; i++) {
+                menu[i].addEventListener('click', toggleChild());
+            }
+            function toggleChild() {
+                let childern = this.childern;
+                for (let i = 0; i < childern.length; i++) {
+                    if (childern[i].style.dispaly == 'none') {
+                        childern[i].style.dispaly = 'block';
+                    } else {
+                        childern[i].style.dispaly = 'none'; 
+                    }
+                }
+            }
+            // let childern1 = quesion.children;
+            // for (let i = 0; i < childern1.length; i++) {
+
+            //     alert(childern1[i].style.display);
+
+            //     }
+        }
+        </script>
         <div id="left">
             <div>
-                <div><a href="#"> 问答</a></div>
+                <div name="question"><a href="#"> 问答</a>
+                     <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                </div>
                 <div><a href="#"> 头条</a></div>
                 <div><a href="#"> 专栏</a></div>
                 <div><a href="#"> 活动</a></div>

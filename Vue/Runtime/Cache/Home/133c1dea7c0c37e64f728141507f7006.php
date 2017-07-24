@@ -58,9 +58,47 @@
     
     <!-- menu -->
     
+        <script>
+            // window.onload = function() { 
+            // let quesion = document.querySelector('div[name=question]');
+            // let childern1 = quesion.children;
+            // for (let i = 0; i < childern1.length; i++) {
+
+            //     alert(childern1[i].style.display);
+
+            //     }
+            // }
+
+        window.onload = function() { 
+            // let quesion = document.querySelector('#left div:first-child div:first-child');
+            let menu = document.querySelector('#left div:first-child');
+            
+            for (let i = 0; i < menu.length; i++) {
+                menu[i].addEventListener('click', toggleChild());
+            }
+            function toggleChild() {
+                let childern = this.childern;
+                for (let i = 0; i < childern.length; i++) {
+                    if (childern[i].style.dispaly == 'none') {
+                        childern[i].style.dispaly = 'block';
+                    } else {
+                        childern[i].style.dispaly = 'none'; 
+                    }
+                }
+            }
+            // let childern1 = quesion.children;
+            // for (let i = 0; i < childern1.length; i++) {
+
+            //     alert(childern1[i].style.display);
+
+            //     }
+        }
+        </script>
         <div id="left">
             <div>
-                <div><a href="#"> 问答</a></div>
+                <div name="question"><a href="#"> 问答</a>
+                     <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                </div>
                 <div><a href="#"> 头条</a></div>
                 <div><a href="#"> 专栏</a></div>
                 <div><a href="#"> 活动</a></div>

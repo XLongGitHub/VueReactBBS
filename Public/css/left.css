@@ -1,24 +1,31 @@
 #left {
     width: 24.8%;
     height: 800px;
-
-     /* background: red;  */
+     /* background: red;   */
      background: #888; 
-    float: left;  
+    float: left;
     position: relative;
     top: 0px;
     left: 0px;
     margin-right: 0.2%;
     display: inline-box;
     /* margin-left: 20px;  */
-    
 }
 
 #left>div:first-child>div {
-    color: gainsboro;
+     /* color: gainsboro;  */
+     /* background: red;  */
     text-align: left;
-    font-size: 28px;
+     font-size: 28px; 
     padding: 5px;
+}
+/* 子标题 */
+.secondMenu {
+    text-align: left;
+    font-size: 20px; 
+    padding: 5px;
+    left: 40px;
+    position: relative; 
 }
 
 #left>div:last-child {
@@ -31,11 +38,10 @@
     /* color: gainsboro; */
     /* color: red; */
     /* text-align: left; */
-     /* margin-top: 5px;  */
+    /* margin-top: 5px;  */
     border-top: 3px solid darkkhaki;
     border-bottom: 3px solid darkkhaki;
 }
-
 
 #news a {
     display: block;
@@ -54,5 +60,4 @@
 
 #news div:first-child a:first-child {
     font-size: 25px;
-
 }
