@@ -12,6 +12,9 @@
     <link href="../../../Public/css/header.css" rel="stylesheet">
     <link href="../../../Public/css/footer.css" rel="stylesheet">
     <link href="../../../Public/css/left.css" rel="stylesheet">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
@@ -63,7 +66,7 @@
         window.onload = function() { 
             // let quesion = document.querySelector('#left div:first-child div:first-child');
             let menus = document.querySelector('#left div:first-child').children;
-            //初始化隐藏子菜单，并为其添加样式
+            //初始化隐藏子菜单，并为其添加样式,绑定点击事件
             (() => {
                 for (let k = 0; k < menus.length; k++) {
                     menus[k].addEventListener('click', toggleChild);
@@ -76,66 +79,36 @@
                     }
                 }
             })();
-
-            for (let i = 0; i < menus.length; i++) {
-            }
-
+            //菜单隐藏显示函数
             function toggleChild() {
-                // alert('toggleChild');
-                // let children = menus[0].children;
                 let children = this.children;
                 for (let item in  children) {
                     console.log(children[item]);
                 }
                 for (let i = 1; i < children.length; i++) {
-                    // alert(children[1].innerHtml);
-                    // if (children[i].style.dispaly == 'none') {
-                    //     children[i].style.dispaly = 'block';
-                    //     console.log(children[i].innerHtml);
-                    //     for (let j = 0; j < children[i].children.length; j++) {
-                    //         children[i].children[j].style.dispaly = 'block';
-                    //     }
-                    // } else {
-                    //     console.log(children[i].innerHtml);
-                    //     children[i].style.dispaly = 'none'; 
-                    //     // for (let j = 0; j < children[i].children.length; j++) {
-                    //         children[i].children[0].style.dispaly = 'none';
-                    //     // }
-                    //     // console.log(children[i].innerHtml);
-                    //     // console.log('show');
-                    // }
-                    console.log(children[i]);
                     if (children[i].style.display != 'none') {
-
-                    children[i].style.display = 'none';
-                    // children[i].firstChild.style.display = 'none';
+                        children[i].style.display = 'none';
                          for (let j = 0; j < children[i].children.length; j++) {
                             children[i].children[j].style.dispaly = 'none';
                         }
                     } else {
                          children[i].style.display = '';
-                    // children[i].firstChild.style.display = '';
                          for (let j = 0; j < children[i].children.length; j++) {
                             children[i].children[j].style.dispaly = '';
                         }
                     }
                 }
             }
-            // let childern1 = quesion.children;
-            // for (let i = 0; i < childern1.length; i++) {
-
-            //     alert(childern1[i].style.display);
-
-            //     }
         }
-        </script>
+</script>
+
         <div id="left">
             <div>
                 <div name="question"><a href="#"> 问答</a>
                     <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
-                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
-                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
-                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                    <div><a href="<?php echo U('Question/add');?>">已发布问题</a></div>
+                    <div><a href="<?php echo U('Question/Index');?>">大家的问题</a></div>
+                    <div><a href="<?php echo U('Question/replay');?>">查看回答</a></div>
                     <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
                 </div>
                 <div><a href="#"> 头条</a>

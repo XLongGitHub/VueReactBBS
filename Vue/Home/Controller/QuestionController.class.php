@@ -4,7 +4,12 @@ use Think\Controller;
 
 class QuestionController extends Controller {
     public function index() {
-
+        $Questions = M('questions');
+        $quesions = $Questions->alias('q')->join('think_users u on u.id = q.userId')
+        ->field('u.name as username, q.title, q.content, q.create_date')->select();
+        // var_dump($quesions);
+        $this->assign('questions', $quesions);
+        $this->display('index');
     }
 
     /**
@@ -14,7 +19,7 @@ class QuestionController extends Controller {
         if (IS_POST) {
             $title = I('post.title', '', 'strval');
             $content = I('post.content', '', 'strval');
-            $userId = $_SESSION['user']['userid'];
+            $userId = $_SESSION['user']['userId'];
             $create_time = date('Y/m/d h:i:sa');
             $top = 1;  //问题
 

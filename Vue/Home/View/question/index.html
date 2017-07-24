@@ -1,0 +1,50 @@
+<extend name="Public/base" />
+<block name="title">
+    <title>问题</title>
+</block>
+
+<block name="main">
+    <style>
+         #question {
+            width: 75%;
+            height: 820px;
+            float: left;
+            position: relative;
+        }
+         #question td {
+            max-width: 200px;
+            /* height: 80px; */
+            /* overflow: hidden; */
+            /* text-overflow: hidden; */
+            /* border: 2px solid tan; */
+        }  
+    </style>
+    <div id="question">
+        <div class="title">问答</div>
+        <br/>
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>问题</th>
+                <th>描述</th>
+                <th>提问人</th>
+                <th>时间</th>
+            </tr>
+            <foreach name="questions" item="question">
+                <tr>
+                    <td>
+                        {$question.title}
+                    </td>
+                    <td>
+                        {$question.content}
+                    </td>
+                    <td>
+                        {$question.username}
+                    </td>
+                    <td>
+                        {$question.create_date}
+                    </td>
+                </tr>
+            </foreach>
+        </table>
+    </div>
+</block>

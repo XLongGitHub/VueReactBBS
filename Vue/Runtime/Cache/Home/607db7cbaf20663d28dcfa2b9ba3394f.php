@@ -29,13 +29,13 @@
                         <img src="../../../Public/images/logo2.png" width="140px" height="75px" />
                         </a>
                     </div>
-                 
+
                     <button>
                         首页</button>
                     <div class="topic">
                         <a href="#"> 话题
                         </a>
-                        </div>
+                    </div>
                 </div>
                 <div id="search">
                     <input type="text" name="search-input" class="search-input" placeholder="请输入你想搜索的内容" />
@@ -43,13 +43,13 @@
 
                 </div>
                 <div id="menu">
-                    <a href="<?php echo U('User/add');?>" style="float: left; display: block;position: relative;" >
+                    <a href="<?php echo U('User/add');?>" style="float: left; display: block;position: relative;">
                     <img src="http://img.hb.aicdn.com/df06b1d34e232d33dd527ee64f98eed9dcfcbf0d3161f-kZEebg_sq140sf" 
                         alt="头像" 
                         style="width:45px;height:45px;float: left;top: 20px; display: block; position: relative; right: 5px;"/>
                     </a>
                     <!-- <div><a href= "../Index/login" > 登陆</a></div> -->
-                    <div><a href= "<?php echo U('Index/login');?>" > 登陆</a></div>
+                    <div><a href="<?php echo U('Index/login');?>"> 登陆</a></div>
                     <div><a href="<?php echo U('User/register');?>"> 注册</a></div>
                     <div><a href="<?php echo U('Index/signOut');?>">  注销</a></div>
                 </div>
@@ -59,47 +59,58 @@
     <!-- menu -->
     
         <script>
-            // window.onload = function() { 
-            // let quesion = document.querySelector('div[name=question]');
-            // let childern1 = quesion.children;
-            // for (let i = 0; i < childern1.length; i++) {
-
-            //     alert(childern1[i].style.display);
-
-            //     }
-            // }
-
+            // 设置菜单栏点击后隐藏显示
         window.onload = function() { 
             // let quesion = document.querySelector('#left div:first-child div:first-child');
-            let menu = document.querySelector('#left div:first-child');
-            
-            for (let i = 0; i < menu.length; i++) {
-                menu[i].addEventListener('click', toggleChild());
-            }
+            let menus = document.querySelector('#left div:first-child').children;
+            //初始化隐藏子菜单，并为其添加样式,绑定点击事件
+            (() => {
+                for (let k = 0; k < menus.length; k++) {
+                    menus[k].addEventListener('click', toggleChild);
+                    for (let i = 1  ; i < menus[k].children.length; i++) {
+                     menus[k].children[i].style.display = 'none';
+                     menus[k].children[i].setAttribute('class', 'secondMenu');
+                         for (let j = 0; j < menus[k].children[i].children.length; j++) {
+                             menus[k].children[i].children[j].style.dispaly = 'none';
+                        }
+                    }
+                }
+            })();
+            //菜单隐藏显示函数
             function toggleChild() {
-                let childern = this.childern;
-                for (let i = 0; i < childern.length; i++) {
-                    if (childern[i].style.dispaly == 'none') {
-                        childern[i].style.dispaly = 'block';
+                let children = this.children;
+                for (let item in  children) {
+                    console.log(children[item]);
+                }
+                for (let i = 1; i < children.length; i++) {
+                    if (children[i].style.display != 'none') {
+                        children[i].style.display = 'none';
+                         for (let j = 0; j < children[i].children.length; j++) {
+                            children[i].children[j].style.dispaly = 'none';
+                        }
                     } else {
-                        childern[i].style.dispaly = 'none'; 
+                         children[i].style.display = '';
+                         for (let j = 0; j < children[i].children.length; j++) {
+                            children[i].children[j].style.dispaly = '';
+                        }
                     }
                 }
             }
-            // let childern1 = quesion.children;
-            // for (let i = 0; i < childern1.length; i++) {
-
-            //     alert(childern1[i].style.display);
-
-            //     }
         }
-        </script>
+</script>
+
         <div id="left">
             <div>
                 <div name="question"><a href="#"> 问答</a>
-                     <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
                 </div>
-                <div><a href="#"> 头条</a></div>
+                <div><a href="#"> 头条</a>
+                    <div><a href="<?php echo U('Question/add');?>">发布问题</a></div>
+                </div>
                 <div><a href="#"> 专栏</a></div>
                 <div><a href="#"> 活动</a></div>
                 <div><a href="#"> 文档</a></div>
@@ -211,19 +222,19 @@
         <br/>
         <div id="footer">
             <div id="footer-content">
-            <div>
-                ©2017 Geek
-            </div>
+                <div>
+                    ©2017 Geek
+                </div>
 
-            <div>
-                <a href="#">帮助</a>
-            </div>
-            <div>
-                <a href="#">  意见反馈</a>
-            </div>
-            <div>
-                <a href="#"> 设置</a>
-            </div>
+                <div>
+                    <a href="#">帮助</a>
+                </div>
+                <div>
+                    <a href="#">  意见反馈</a>
+                </div>
+                <div>
+                    <a href="#"> 设置</a>
+                </div>
             </div>
         </div>
     
