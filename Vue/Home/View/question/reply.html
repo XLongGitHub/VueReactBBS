@@ -1,0 +1,35 @@
+<extend name="Public/base" />
+<block name="title">
+    <title>回答问题</title>
+</block>
+
+<block name="main">
+    <style>
+         #form-wrap {
+             width: 70%;
+             float: left;
+         }
+    </style>
+    <div id="form-wrap">
+        <div class="page-header">
+            <h2>{$title}
+                <small>{$content}</small>
+                <small>{$name}</small>
+                <small>{$create_date}</small>
+            </h2>
+
+        </div>
+        <form class="form" method="POST">
+            <input name="id" type="hidden" value="{$id}"/>
+            <div class="form-group">
+                <label for="reply">回答</label>
+                <textarea rows="5" class="form-control" name="reply"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-large btn-block btn-info btn-inline">提交</button>
+                <button type="button" class="btn btn-large btn-block btn-info btn-inline">返回</button>
+            </div>
+        </form>
+    <div>
+
+</block>

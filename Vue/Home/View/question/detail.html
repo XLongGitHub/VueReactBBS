@@ -1,1 +1,31 @@
-<extend name="Public/base" />
+<!-- <extend name="base"/> -->
+<div id="form-wrap">
+        <div class="page-header">
+            <h2>{$title}
+                <small>{$content}</small>
+                <small>{$name}</small>
+                <small>{$create_date}</small>
+            </h2>
+
+        </div>
+        <div>
+            <table class="table">
+                <caption>内容回复</caption>
+                <tr>
+                    <th> 内容 </th>
+                    <th> 回复人 </th>
+                    <th> 时间 </th>
+                </tr>
+
+                <foreach name="replyAll" item="item">
+                    <tr>
+                        <td>{$item['content']}</td>
+                        <td>{$item['name']}</td>
+                        <td>{$item['create_date']}</td>
+                    </tr>
+                </foreach>
+            </table>
+             <a href="{:U('Question/reply?.id='.$id)}">回复</a> 
+            
+        </div>
+    <div>

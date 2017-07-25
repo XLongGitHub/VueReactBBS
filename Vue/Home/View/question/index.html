@@ -28,6 +28,7 @@
                 <th>描述</th>
                 <th>提问人</th>
                 <th>时间</th>
+                <th>回答</th>
             </tr>
             <foreach name="questions" item="question">
                 <tr>
@@ -42,6 +43,11 @@
                     </td>
                     <td>
                         {$question.create_date}
+                    </td>
+                    <td>
+                        <a href="{:U('Question/detail?id='.$question['id'])}">
+                            详情
+                        </a>
                     </td>
                 </tr>
             </foreach>
