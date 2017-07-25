@@ -102,9 +102,19 @@ class QuestionController extends Controller {
             ->join('think_users u on u.id = q.userId')
             ->field('q.content, q.create_date, u.name')
             ->select();
-            // var_dump('dafssssssssssssssssssssssssss');
             $this->assign('replyAll', $replyAll);
             $this->display('detail');
         }
     }
+    /**
+    *查看我的回答和问题
+    */
+    public function myReply() {
+        $Questions = D('questions');
+        $userId = $_SESSION['user']['userId'];
+        $quesions = $Questions->where("userId = $userId")->select();
+        
+
+    }
+
 }
